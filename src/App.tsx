@@ -2,6 +2,10 @@ import JSX from './JSX';
 import Props from './Props';
 import State from './State';
 import ConditionalRendering from './ConditionalRendering';
+import ListKey from './ListKey';
+import LiftingStateUp from './LiftingStateUp';
+import From from './From';
+
 
 function App() {
   return (
@@ -16,6 +20,15 @@ function App() {
 
       <br />
       <ConditionalRendering />
+
+      <br />
+      <ListKey />
+
+      <br />
+      <LiftingStateUp />
+
+      <br />
+      <From />
 
 
       <br />

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <div>Javascript</div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script type="text/javascript">
+      /* function
+        - traditional function / declaration function
+        - arrow function
+        - pure function
+        - no side effect: ko có thay đổi giá trị của biến bên ngoài
+          - nhận vào input, trả về output
+        - arrow function
+          - Arrow function doesn’t this.
+          - Arrow function doesn’t bind.
+          - Arrow function to anonymous function
+      */
+
+      function sumTraditional() {}
+      const sumArrow = () => {}
+
+      const todos = [
+        { id: 1, title: 'tony' },
+        { id: 3, title: 'huy' }
+      ]
+
+      // pure function
+      function addTodo(todoItem) {
+        const clonedTodos = [...todos];
+
+        clonedTodos.push(todoItem);
+        return clonedTodos;
+      } 
+
+      // pure function
+      function updateTodo(todoId) {
+        // const clonedTodos = [...todos]; // shallow clone/copy -> copy value, keep reference
+        const clonedTodos = JSON.parse(JSON.stringify(todos)); // deep clone/copy -> copy value, create new reference
+        const index = clonedTodos.findIndex(todo => todo.id === todoId);
+        if(index === -1) return;
+
+        clonedTodos[index].title = 'title react';
+        return clonedTodos;
+      } 
+
+      // const todoAdded = addTodo({
+      //   id: 2, title: 'hung'
+      // })
+
+      const todosUpdated = updateTodo(3)
+
+      console.log('pure function', {
+        todos,
+        // todoAdded,
+        todosUpdated
+      })
+
+      // arrow function
+      const divide = () => {}
+      const user = {
+        first_name: 'tony',
+        last_name: 'nguyen',
+        age: 18,
+        getFullName: function() {
+          console.log('traditional function: ', this)
+        },
+        getAge: () => {
+          console.log('arrow function: ', this)
+        }
+      }
+      
+      user.getFullName();
+      user.getAge();
+
+    
+      /* return truc tiep */
+      const sum = (x , y) => ({ x, y }); // {x : '', y: ''}
+      function sumTraditional(x, y) {
+        return x + y
+      };
+
+      console.log('return truc tiep: ', sum(1,2));
+
+      // curry function
+      // function abcFunction(x) {
+      //   return function(y) {
+      //     return x + y
+      //   }
+      // }
+      const abcFunction = (x) => (y) => x + y;
+      console.log('curry function: ', abcFunction(1)(2)); 
+
+    </script>
+  </body>
+</html>
