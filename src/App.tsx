@@ -5,6 +5,7 @@ import ConditionalRendering from './ConditionalRendering';
 import ListKey from './ListKey';
 import LiftingStateUp from './LiftingStateUp';
 import From from './From';
+import TonyGenerateBox from './sample-app/TonyGenerateBox';
 
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
 
       <br />
       <From />
+
+      <TonyGenerateBox />
 
 
       <br />
