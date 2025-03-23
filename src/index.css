@@ -41,3 +41,11 @@ h1 {
   flex-wrap: wrap;
   width: 500px;
 }
+
+.box1 {
+  background-color: blueviolet;
+  transition: all .5s linear;
+}
+.box1:hover {
+  opacity: 0;
+}

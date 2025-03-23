@@ -6,9 +6,13 @@ import ListKey from './ListKey';
 import LiftingStateUp from './LiftingStateUp';
 import From from './From';
 import TonyGenerateBox from './sample-app/TonyGenerateBox';
+import StateHook from './StateHook';
+import EffectHook from './EffectHook';
+import React from 'react';
 
 
 function App() {
+  const [isMounted, setIsMounted] = React.useState(true);
   return (
     <>
       <JSX />
@@ -32,6 +36,15 @@ function App() {
       <From />
 
       <TonyGenerateBox />
+
+      <br />
+      <StateHook />
+      
+      <br />
+      <button onClick={() => setIsMounted(false)}>Test Unmounted</button>
+      {isMounted && (
+        <EffectHook />
+      )}
 
 
       <br />
