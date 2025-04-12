@@ -9,6 +9,8 @@ import TonyGenerateBox from './sample-app/TonyGenerateBox';
 import StateHook from './StateHook';
 import EffectHook from './EffectHook';
 import React from 'react';
+import TonyColorBox from './sample-app/TonyColorBox';
+import TonyTrafficLight from './sample-app/TonyTrafficLight';
 
 
 function App() {
@@ -45,6 +47,12 @@ function App() {
       {isMounted && (
         <EffectHook />
       )}
+
+      <br />
+      <TonyColorBox />
+
+      <br />
+      <TonyTrafficLight />
 
 
       <br />
