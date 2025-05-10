@@ -11,6 +11,9 @@ import EffectHook from './EffectHook';
 import React from 'react';
 import TonyColorBox from './sample-app/TonyColorBox';
 import TonyTrafficLight from './sample-app/TonyTrafficLight';
+import DemoWrapperComponent from './DemoWrapperComponent';
+import ContextHook from './ContextHook';
+import { MovieProvider } from './contexts/MovieContext';
 
 
 function App() {
@@ -53,6 +56,14 @@ function App() {
 
       <br />
       <TonyTrafficLight />
+      <br />
+
+      <DemoWrapperComponent />
+
+      <br />
+      <MovieProvider>
+        <ContextHook />
+      </MovieProvider>
 
 
       <br />

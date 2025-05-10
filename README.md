@@ -7,4 +7,14 @@
 - qc/staging: unstable branch, used for QC team, can be reset anytime with an announcement
 - uat: Used for sanity testing before release to production
 
+# Step to step gitflow
+```bash
+# 1. create new branch from main branch
+$ git checkout main
+$ git checkout -b {name branch}
+$ git add .
+$ git commit -m "...."
+$ git push
 
+# 2. create PR (Pull Request)
+```
